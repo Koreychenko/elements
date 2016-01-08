@@ -19,7 +19,6 @@ features[features_api][] = api:2
 features[field_base][] = field_slide
 features[field_base][] = field_slide_image
 features[field_base][] = field_slide_link
-features[field_base][] = title_field
 features[field_instance][] = field_collection_item-field_slide-field_slide_image
 features[field_instance][] = field_collection_item-field_slide-field_slide_link
 features[field_instance][] = fieldable_panels_pane-slider-field_slide

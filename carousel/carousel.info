@@ -15,7 +15,6 @@ features[ctools][] = fieldable_panels_panes:fieldable_panels_pane_type:1
 features[ctools][] = slick:slick_default_preset:1
 features[features_api][] = api:2
 features[field_base][] = field_carousel_image
-features[field_base][] = title_field
 features[field_instance][] = fieldable_panels_pane-carousel-field_carousel_image
 features[field_instance][] = fieldable_panels_pane-carousel-title_field
 features[fieldable_panels_pane_type][] = carousel

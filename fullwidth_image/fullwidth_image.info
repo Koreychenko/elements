@@ -12,7 +12,6 @@ dependencies[] = text
 features[ctools][] = fieldable_panels_panes:fieldable_panels_pane_type:1
 features[features_api][] = api:2
 features[field_base][] = field_fullwidth_image_image
-features[field_base][] = title_field
 features[field_instance][] = fieldable_panels_pane-fullwidth_image-field_fullwidth_image_image
 features[field_instance][] = fieldable_panels_pane-fullwidth_image-title_field
 features[fieldable_panels_pane_type][] = fullwidth_image

@@ -17,7 +17,6 @@ features[features_api][] = api:2
 features[field_base][] = field_paragraph_image
 features[field_base][] = field_paragraph_image_position
 features[field_base][] = field_paragraph_text
-features[field_base][] = title_field
 features[field_instance][] = fieldable_panels_pane-paragraph-field_paragraph_image
 features[field_instance][] = fieldable_panels_pane-paragraph-field_paragraph_image_position
 features[field_instance][] = fieldable_panels_pane-paragraph-field_paragraph_text
