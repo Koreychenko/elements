@@ -11,7 +11,7 @@ function gallery_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-gallery_6_images-field_gallery'
+  // 'fieldable_panels_pane-gallery_6_images-field_gallery'.
   $field_instances['fieldable_panels_pane-gallery_6_images-field_gallery'] = array(
     'bundle' => 'gallery_6_images',
     'deleted' => 0,
@@ -27,7 +27,7 @@ function gallery_field_default_field_instances() {
           'colorbox_gallery_custom' => '',
           'colorbox_image_style' => '',
           'colorbox_multivalue_index' => NULL,
-          'colorbox_node_style' => 'gallery_style',
+          'colorbox_node_style' => 'gallery',
           'colorbox_node_style_first' => '',
           'field_multiple_limit' => -1,
           'field_multiple_limit_offset' => 0,
@@ -41,42 +41,52 @@ function gallery_field_default_field_instances() {
     'label' => 'Галерея',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
       'min_resolution' => '',
-      'title_field' => 0,
+      'title_field' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'image',
       'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
+        'filefield_sources' => array(
+          'filefield_sources' => array(
+            'attach' => 0,
+            'clipboard' => 'clipboard',
+            'imce' => 'imce',
+            'reference' => 0,
+            'remote' => 'remote',
+            'upload' => 'upload',
+          ),
+          'source_attach' => array(
+            'absolute' => 0,
+            'attach_mode' => 'move',
+            'path' => 'file_attach',
+          ),
+          'source_imce' => array(
+            'imce_mode' => 1,
+          ),
+          'source_reference' => array(
+            'autocomplete' => 0,
+            'search_all_fields' => 0,
+          ),
         ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'upload' => 'upload',
-        ),
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'image_image',
       'weight' => -4,
     ),
   );
 
   // Exported field_instance:
-  // 'fieldable_panels_pane-gallery_6_images-field_gallery_size'
+  // 'fieldable_panels_pane-gallery_6_images-field_gallery_size'.
   $field_instances['fieldable_panels_pane-gallery_6_images-field_gallery_size'] = array(
     'bundle' => 'gallery_6_images',
     'default_value' => array(
@@ -112,8 +122,51 @@ function gallery_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'fieldable_panels_pane-gallery_6_images-title_field'.
+  $field_instances['fieldable_panels_pane-gallery_6_images-title_field'] = array(
+    'bundle' => 'gallery_6_images',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A field replacing fieldable panel pane title.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(
+          'field_multiple_limit' => -1,
+          'field_multiple_limit_offset' => 0,
+        ),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => FALSE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('A field replacing fieldable panel pane title.');
+  t('Title');
   t('Галерея');
   t('Размер галереи');
 
