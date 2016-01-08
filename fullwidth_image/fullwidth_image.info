@@ -1,0 +1,16 @@
+name = Fullwidth Image
+description = Изображение на всю ширину
+core = 7.x
+package = Elements
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = fieldable_panels_panes
+dependencies[] = image
+dependencies[] = media
+dependencies[] = panels
+features[ctools][] = fieldable_panels_panes:fieldable_panels_pane_type:1
+features[features_api][] = api:2
+features[field_base][] = field_fullwidth_image_image
+features[field_instance][] = fieldable_panels_pane-fullwidth_image-field_fullwidth_image_image
+features[fieldable_panels_pane_type][] = fullwidth_image

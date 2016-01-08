@@ -1,0 +1,11 @@
+.paragraph-image-position-left .field-name-field-paragraph-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.paragraph-image-position-right .field-name-field-paragraph-image {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}

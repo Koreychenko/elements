@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Code for the Табы feature.
+ */
+
+include_once 'elements_tabs.features.inc';
+
+function elements_tabs_theme($existing, $type, $theme, $path) {
+  return array(
+    'field__field_tabs' => array(
+      'render element' => 'content',
+      'base hook' => 'field',
+      'template' => 'element-tabs-field-tabs',
+      ),
+    );
+}
+
+function elements_tabs_preprocess_fieldable_panels_pane(&$vars) {
+  switch ($vars['elements']['#bundle']) {
+    case 'elements_tabs':
+      drupal_add_library('system', 'ui.tabs');
+      drupal_add_css(drupal_get_path('module','elements_tabs').'/elements_tabs.css');
+      drupal_add_js(drupal_get_path('module','elements_tabs').'/elements_tabs.js');
+    break;
+  }
+}

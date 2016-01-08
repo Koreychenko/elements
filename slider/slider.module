@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Code for the Slider feature.
+ */
+
+include_once 'slider.features.inc';
+
+function slider_preprocess_fieldable_panels_pane(&$vars) {
+  switch ($vars['elements']['#bundle']) {
+    case 'slider':
+      drupal_add_css(drupal_get_path('module','slider').'/slider.css');
+    break;
+  }
+}
+
+function slider_panel_modal_links_images($images) {
+  $images['slider'] = drupal_get_path('module', 'slider') . '/icon.png';
+  return $images;
+}

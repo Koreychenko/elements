@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Code for the Paragraph feature.
+ */
+
+include_once 'paragraph.features.inc';
+
+function paragraph_preprocess_fieldable_panels_pane(&$vars) {
+  switch ($vars['elements']['#bundle']) {
+    case 'paragraph':
+      drupal_add_css(drupal_get_path('module','paragraph').'/paragraph.css');
+      $image_position = $vars['elements']['#fieldable_panels_pane']->field_paragraph_image_position['und'][0]['value'];
+      $vars['classes_array'][] = 'paragraph-image';
+      $vars['classes_array'][] = 'paragraph-image-position-'.$image_position;
+      $vars['classes_array'][] = 'clearfix';
+    break;
+  }
+}
+
+
+function paragraph_panel_modal_links_images($images) {
+  $images['paragraph'] = drupal_get_path('module', 'paragraph') . '/icon.png';
+  return $images;
+}

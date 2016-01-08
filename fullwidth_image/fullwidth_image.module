@@ -1,0 +1,20 @@
+<?php
+/**
+ * @file
+ * Code for the Fullwidth Image feature.
+ */
+
+include_once 'fullwidth_image.features.inc';
+
+function fullwidth_image_preprocess_fieldable_panels_pane(&$vars) {
+  switch ($vars['elements']['#bundle']) {
+    case 'fullwidth_image':
+      drupal_add_css(drupal_get_path('module','fullwidth_image').'/fullwidth_image.css');
+    break;
+  }
+}
+
+function fullwidth_image_panel_modal_links_images($images) {
+  $images['fullwidth_image'] = drupal_get_path('module', 'fullwidth_image') . '/icon.png';
+  return $images;
+}

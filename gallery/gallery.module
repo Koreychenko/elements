@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Code for the Gallery feature.
+ */
+
+include_once 'gallery.features.inc';
+
+
+function gallery_theme($existing, $type, $theme, $path) {
+  return array(
+    'field__field_gallery' => array(
+      'render element' => 'content',
+      'base hook' => 'field',
+      'template' => 'gallery-field-gallery',
+      ),
+    );
+}
