@@ -10,7 +10,8 @@
 function elements_tabs_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_tabs-field_tabs_text'
+  // Exported field_instance:
+  // 'field_collection_item-field_tabs-field_tabs_text'.
   $field_instances['field_collection_item-field_tabs-field_tabs_text'] = array(
     'bundle' => 'field_tabs',
     'default_value' => NULL,
@@ -48,7 +49,7 @@ function elements_tabs_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_tabs-field_tabs_title'
+  // 'field_collection_item-field_tabs-field_tabs_title'.
   $field_instances['field_collection_item-field_tabs-field_tabs_title'] = array(
     'bundle' => 'field_tabs',
     'default_value' => NULL,
@@ -85,7 +86,7 @@ function elements_tabs_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-elements_tabs-field_tabs'
+  // Exported field_instance: 'fieldable_panels_pane-elements_tabs-field_tabs'.
   $field_instances['fieldable_panels_pane-elements_tabs-field_tabs'] = array(
     'bundle' => 'elements_tabs',
     'default_value' => NULL,
@@ -120,8 +121,46 @@ function elements_tabs_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'fieldable_panels_pane-elements_tabs-title_field'.
+  $field_instances['fieldable_panels_pane-elements_tabs-title_field'] = array(
+    'bundle' => 'elements_tabs',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A field replacing fieldable panel pane title.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => FALSE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('A field replacing fieldable panel pane title.');
+  t('Title');
   t('Заголовок');
   t('Табы');
   t('Текст');

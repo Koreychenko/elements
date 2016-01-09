@@ -11,7 +11,7 @@ function accordion_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'field_collection_item-field_accrodion-field_accordion_text'
+  // 'field_collection_item-field_accrodion-field_accordion_text'.
   $field_instances['field_collection_item-field_accrodion-field_accordion_text'] = array(
     'bundle' => 'field_accrodion',
     'default_value' => NULL,
@@ -49,7 +49,7 @@ function accordion_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'field_collection_item-field_accrodion-field_accordion_title'
+  // 'field_collection_item-field_accrodion-field_accordion_title'.
   $field_instances['field_collection_item-field_accrodion-field_accordion_title'] = array(
     'bundle' => 'field_accrodion',
     'default_value' => NULL,
@@ -86,7 +86,7 @@ function accordion_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-accordion-field_accrodion'
+  // Exported field_instance: 'fieldable_panels_pane-accordion-field_accrodion'.
   $field_instances['fieldable_panels_pane-accordion-field_accrodion'] = array(
     'bundle' => 'accordion',
     'default_value' => NULL,
@@ -121,8 +121,46 @@ function accordion_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'fieldable_panels_pane-accordion-title_field'.
+  $field_instances['fieldable_panels_pane-accordion-title_field'] = array(
+    'bundle' => 'accordion',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A field replacing fieldable panel pane title.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'title_field',
+    'label' => 'Title',
+    'required' => FALSE,
+    'settings' => array(
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -10,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('A field replacing fieldable panel pane title.');
+  t('Title');
   t('Заголовок');
   t('Текст аккордиона');
   t('Элемент аккордиона');

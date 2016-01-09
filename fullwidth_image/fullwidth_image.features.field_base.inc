@@ -32,5 +32,5 @@ function fullwidth_image_field_default_field_bases() {
     'type' => 'image',
   );
 
-   return $field_bases;
+  return $field_bases;
 }

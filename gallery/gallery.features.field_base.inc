@@ -59,6 +59,5 @@ function gallery_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-
   return $field_bases;
 }

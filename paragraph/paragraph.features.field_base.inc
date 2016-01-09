@@ -78,6 +78,5 @@ function paragraph_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-
   return $field_bases;
 }

@@ -23,3 +23,12 @@ function paragraph_panel_modal_links_images($images) {
   $images['paragraph'] = drupal_get_path('module', 'paragraph') . '/icon.png';
   return $images;
 }
+
+function paragraph_theme() {
+  return array(
+    'fpp_paragraph_custom_form_tpl' => array(
+      'render element' => 'form',
+      'template' => 'fpp-paragraph-custom-form-tpl',
+      ),
+    );
+}
