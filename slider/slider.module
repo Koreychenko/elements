@@ -15,6 +15,6 @@ function slider_preprocess_fieldable_panels_pane(&$vars) {
 }
 
 function slider_panel_modal_links_images($images) {
-  $images['slider'] = drupal_get_path('module', 'slider') . '/icon.png';
+  $images['slider'] = '/'.drupal_get_path('module', 'slider') . '/icon.png';
   return $images;
 }
