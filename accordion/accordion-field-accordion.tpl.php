@@ -1,5 +1,5 @@
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div class="field-items row"<?php print $content_attributes; ?>>
+  <div class="field-items"<?php print $content_attributes; ?>>
     <div class="accordion-items">
       <?php foreach ($items as $delta => $item): ?>
         <?php if (isset($item['entity'])): ?>
